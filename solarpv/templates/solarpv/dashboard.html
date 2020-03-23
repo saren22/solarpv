@@ -1,0 +1,249 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>PE Solar</title>
+  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript" src=" https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<body class="body-register">
+<div class="template">
+	<div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ftl-vertical-tab-container">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 ftl-vertical-tab-menu">
+              <div class="list-group">
+                <a href="#" class="list-group-item active text-center">
+                  <h4 class="glyphicon glyphicon-book"></h4><br/>Client
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <h4 class="glyphicon glyphicon-book"></h4><br/>Location
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <h4 class="glyphicon glyphicon-book"></h4><br/>Product
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <h4 class="glyphicon glyphicon-book"></h4><br/>Test Standard
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <h4 class="glyphicon glyphicon-book"></h4><br/>Certificate
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 ftl-vertical-tab">
+                <!-- Client section -->
+                <div class="ftl-vertical-tab-content active">
+                  <form action="confirmation.php" method="post">
+                    <h2>Client Form</h2>
+                    <p>Please fill in this form</p>
+                    <hr>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="client_code" placeholder="Client Code" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="client_name" placeholder="Client Name" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="client_type" placeholder="Client Type" required="required">
+                    </div>
+                    <div class="form-group text-center">
+                      <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                    </div>
+                  </form>
+                </div>
+                <!-- Location section -->
+                <div class="ftl-vertical-tab-content">
+                  <form action="confirmation.php" method="post">
+                    <h2>Location Form</h2>
+                    <p>Please fill in this form</p>
+                    <hr>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="location_id" placeholder="Location ID" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="client_id" placeholder="Client ID" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="address_1" placeholder="Address 1" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="address_2" placeholder="Address 2" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="city" placeholder="City" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="state" placeholder="State" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="postal_code" placeholder="Postal Code" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="country" placeholder="Country" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="phone_number" placeholder="Phone Number" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="fax_number" placeholder="Fax Number" required="required">
+                    </div>
+                    <div class="form-group text-center">
+                      <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                    </div>
+                  </form>
+                </div>
+    
+                <!-- Product section -->
+                <div class="ftl-vertical-tab-content">
+                  <form action="confirmation.php" method="post">
+                    <h2>Product Form</h2>
+                    <p>Please fill in this form</p>
+                    <hr>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="model_num" placeholder="Model Number" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="name" placeholder="Name" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="cell_technology" placeholder="Cell Technology" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="cell_manufacturer" placeholder="Cell Manufacturer" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="num_cells" placeholder="Number of Cells" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="num_cells_series" placeholder="Number of Cells in Series" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="num_series_strings" placeholder="Number of Series Strings" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="num_diodes" placeholder="Number of Diodes" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="product_length" placeholder="Product Length" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="product_width" placeholder="Product Width" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="product_weigtht" placeholder="Product Weigtht" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="superstrate_type" placeholder="Superstrate Type" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="superstrate_manuf" placeholder="Superstrate Manufacturer" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="substrate_type" placeholder="Substrate Type" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="substrate_manuf" placeholder="Substrate Manufacturer" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="frame_type" placeholder="Frame Type" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="frame_adhesive" placeholder="Frame Adhesive" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="encapsulant_type" placeholder="Encapsulant Type" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="encapsulant_manuf" placeholder="Encapsulant Manufacturer" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="junction_box_type" placeholder="Junction Box Type" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="junction_box_manufacturer" placeholder="Junction Box Manufacturer" required="required">
+                    </div>
+                    <div class="form-group text-center">
+                      <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                    </div>
+                  </form>
+                </div>
+                <!-- Test Standard section -->
+                <div class="ftl-vertical-tab-content">
+                  <form action="confirmation.php" method="post">
+                    <h2>Test Standard Form</h2>
+                    <p>Please fill in this form</p>
+                    <hr>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="standard_id" placeholder="Standard ID" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="standard_name" placeholder="Standard Name" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="description" placeholder="Description" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="published_date" placeholder="Published Date" required="required">
+                    </div>
+                    <div class="form-group text-center">
+                      <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                    </div>
+                  </form>
+                </div>
+                <!-- Certificate section -->
+                <div class="ftl-vertical-tab-content">
+                  <form action="confirmation.php" method="post">
+                    <h2>Certificate Form</h2>
+                    <p>Please fill in this form</p>
+                    <hr>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="id" placeholder="ID" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="cert_number" placeholder="Certificate Number" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="location" placeholder="Location" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="report_number" placeholder="Report Number" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="contact_id" placeholder="Contact ID" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="test_standard" placeholder="Test Standard" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="product" placeholder="Product" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="cert_issue_date" placeholder="Certificate Issue Date" required="required">
+                    </div>
+                    <div class="form-group text-center">
+                      <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                    </div>
+                  </form>
+                </div>
+            </div>
+        </div>
+  </div>
+   
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+    $("div.ftl-vertical-tab-menu>div.list-group>a").click(function(e) {
+        e.preventDefault();
+        $(this).siblings('a.active').removeClass("active");
+        $(this).addClass("active");
+        var index = $(this).index();
+        $("div.ftl-vertical-tab>div.ftl-vertical-tab-content").removeClass("active");
+        $("div.ftl-vertical-tab>div.ftl-vertical-tab-content").eq(index).addClass("active");
+    });
+});
+</script>
+</body>
+</html>
