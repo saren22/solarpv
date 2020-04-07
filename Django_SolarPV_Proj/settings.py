@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'solarpv',
+    'backend',
 ]
 
 MIDDLEWARE = [
@@ -72,11 +74,21 @@ WSGI_APPLICATION = 'Django_SolarPV_Proj.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
+ 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # MySQL database engine class.
+        'ENGINE': 'django.db.backends.mysql',
+        # MySQL database host ip.
+        'HOST': 'localhost',
+        # port number.
+        'PORT': '3306',
+        # database name.
+        'NAME': 'solarpv_db',
+        # user name.
+        'USER': 'root',
+        # password
+        'PASSWORD': 'password',
     }
 }
 
