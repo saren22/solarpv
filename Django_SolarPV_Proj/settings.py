@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'solarpv',
     'backend',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
