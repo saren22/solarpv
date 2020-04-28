@@ -20,4 +20,5 @@ urlpatterns = [
     path('', include('backend.api.urls')),
     path('', include('solarpv.urls')),
     path('admin/', admin.site.urls),
+    path('accounts/', include('accounts.urls'))
 ]

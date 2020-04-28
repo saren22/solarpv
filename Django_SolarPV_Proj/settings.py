@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'solarpv',
     'backend',
     'rest_framework',
+    'accounts',
 ]
 
 MIDDLEWARE = [
