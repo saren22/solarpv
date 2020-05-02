@@ -12,11 +12,12 @@ def login(request):
             #print('!!!!!!!! user logged in 333!!!!!!!!!!!!!!', User.objects.get(user_id=user_id).client_id.client_type)
             userType = User.objects.get(user_id=user_id).client_id.client_type
             if userType == 'staff':
-                return render(request, 'dashboard.html')
+                return redirect('/admin')
             else:     #if its a client
                 return redirect('/')
         else:
             print('!!!!!!!! This user does not exist !!!!!!!!!!!!!!')
+            messages.info(request, 'This user does not exist. Please try different User name')
             return redirect('/')
         
 

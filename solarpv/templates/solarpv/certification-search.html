@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Certification Search</title>
+  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript" src=" https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <!-- header-area start -->
+    <div id="sticker" class="header-area" style="background: rgba(0, 0, 0, 0.80);">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            <!-- Navigation -->
+            <nav class="navbar navbar-default">
+              <div class="row login-nav" style="float:right;margin-right:15px;" >
+                <ul class="nav navbar-nav navbar-right">
+                  <li>
+                    <a class="page-scroll" href="index.html">
+                      <h1>Home</h1>
+                    </a>
+                  </li>
+                  <li>
+                </ul>      
+              </div>
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <a class="" href='index.html'>
+                  <div class="row">
+                    <div style="float:left;">
+                      <img src="{% static 'img/Logo-01.png' %}" alt="" width="40%" height="40%"/>                
+                    </div>                     
+                    <!-- <img src="img/logo.png" alt="" title=""> -->
+                  </div>
+                </a>                
+              </div>
+            </nav>
+            <!-- END: Navigation -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- header-area end -->
+  </header>
+  <div class="container"> 
+    <br><br><br> <br><br><br>
+    <h3>Certification Search</h3>
+    <br>
+    <form method="POST" action="certification-search">
+      {% csrf_token %}
+      <div class="form-group">
+        <div class="col-lg-5">
+          <input class="form-control mb-4" name="searchInput" type="text" value="{{sTxtAfter}}" placeholder="Type to search list items">
+        </div>
+        <label class="col-lg-2">
+          <button class="btn btn-danger btn-rounded" type="submit">Search</button>
+        </label>
+      </div>
+    </form>
+
+    <div>
+      {% if messages %}
+        <ul class="messages">
+          {% for message in messages %}
+            <li style="color: red">{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+    <br><br><br>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Certificate Number</th>
+          <th>Certificate ID</th>
+          <th>Report Number</th>
+        </tr>
+      </thead>
+      
+        <tbody id="myTable">
+          {% for obj in object_list %}
+            <tr>
+              <td>{{obj.certificate_number}}</td>
+              <td>{{obj.id}}</td>
+              <td>{{obj.report_number}}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+
+    </table>
+  </div>
+
+</body>
+</html>

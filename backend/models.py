@@ -66,13 +66,13 @@ class Product(models.Model):
 
 class Certificate(models.Model):
     certificate_number = models.CharField(max_length=50, primary_key=True)
-    id = models.CharField(max_length=50)
-    user_id = models.ForeignKey(User, on_delete = models.CASCADE)
+    id = models.CharField(max_length=50)    
     report_number = models.CharField(max_length=50, null=True)
     issue_date = models.DateTimeField(null=True)
-    standard_id = models.ForeignKey(Test_Standard, on_delete = models.CASCADE)
-    location_id = models.ForeignKey(Location, on_delete = models.CASCADE)
-    model_number = models.ForeignKey(Product, on_delete = models.CASCADE)
+    user_id = models.ForeignKey(User, on_delete = models.CASCADE, null=True)
+    standard_id = models.ForeignKey(Test_Standard, on_delete = models.CASCADE, null=True)
+    location_id = models.ForeignKey(Location, on_delete = models.CASCADE, null=True)
+    model_number = models.ForeignKey(Product, on_delete = models.CASCADE, null=True)
 
 
 class Service(models.Model):

@@ -27,7 +27,7 @@
 						<label for="companyTypeSelect">Company (Client names + ClientID)</label>
 						<select class="form-control" name="companyTypeSelect">
 							{% for client in client_list %}
-								<option value="{{client.client_id}}">{{client.client_name }} ({{client.client_id}})</option>
+								<option value="{{client.client_id}}">{{client.client_name }} ({{client.client_id}}) - {{client.client_type}}</option>
 							{% endfor %}
 						</select>
 					</div>

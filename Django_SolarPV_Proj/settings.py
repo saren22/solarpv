@@ -26,7 +26,8 @@ SECRET_KEY = '$+0ebc18v0h$zzqwog#q^iiy=pryf(*@rz_u!d1frs(5dw37^_'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+##pythonanwhere database settings
+#ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -76,7 +77,8 @@ WSGI_APPLICATION = 'Django_SolarPV_Proj.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
- 
+
+##localhost database settings
 DATABASES = {
     'default': {
         # MySQL database engine class.
@@ -93,6 +95,22 @@ DATABASES = {
         'PASSWORD': 'password',
     }
 }
+
+##pythonanwhere database settings
+""" DATABASES = {
+    'default': {
+        # MySQL database engine class.
+        'ENGINE': 'django.db.backends.mysql',
+        # MySQL database host ip.
+        'HOST': 'skuma143.mysql.pythonanywhere-services.com',
+        # database name.
+        'NAME': 'skuma143$solarpv_db',
+        # user name.
+        'USER': 'skuma143',
+        # password
+        'PASSWORD': 'pythonanywhere',
+    }
+} """
 
 
 # Password validation
@@ -136,3 +154,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'solarpv/static/solarpv/')
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'solarpv/assets/')
+
+##$ python manage.py collectstatic
+##This will copy all files from your static folders(STATICFILES_DIRS) into the STATIC_ROOT directory.
+##Finally uses files on STATIC_ROOT path
+##STATIC_URL = '/static/' -- This is to tell browser to create folder for static files with this name 'static' 
